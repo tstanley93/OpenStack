@@ -373,17 +373,5 @@
     }
   ],
   "outputs": {
-    "GUI-URL": {
-      "type": "string",
-      "value": "[concat('https://',reference(variables('publicIPAddressID')).dnsSettings.fqdn,':8443',' Increment Port number for additional BIG-IP Devices.')]"
-    },
-    "SSH-URL": {
-      "type": "string",
-      "value": "[concat(reference(variables('publicIPAddressID')).dnsSettings.fqdn,' ',8022,' Increment Port number for additional BIG-IP Devices.')]"
-    },
-    "Documentation": {
-      "type": "string",
-      "value": "To configure these BIG-IP devices into a Device Service Cluster, please see the following documentation.  https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/bigip-device-service-clustering-admin-12-0-0.html?sr=50978566"
-    }
   }
 }
