@@ -260,7 +260,7 @@
       },
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[concat('Microsoft.Storage/storageAccounts/', concat(parameters('stackPrefix'), '-store'))]",
+        "[concat('Microsoft.Storage/storageAccounts/', concat(parameters('stackPrefix'), 'store'))]",
         "[concat('Microsoft.Network/networkInterfaces/', concat(parameters('stackPrefix'), '-mgtnic', 0))]",
         "[concat('Microsoft.Network/networkInterfaces/', concat(parameters('stackPrefix'), '-datanic', 0))]",
         "[concat('Microsoft.Compute/availabilitySets/', concat(parameters('stackPrefix'), '-avset'))]"
@@ -287,7 +287,7 @@
           "osDisk": {
             "name": "osdisk",
             "vhd": {
-              "uri": "[concat('http://',parameters('stackPrefix'),'-store','.blob.core.windows.net/vhds/','osdisk', '-controller', '.vhd')]"
+              "uri": "[concat('http://',parameters('stackPrefix'),'store','.blob.core.windows.net/vhds/','osdisk', '-controller', '.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
@@ -306,7 +306,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[concat('http://',parameters('stackPrefix'), '-store','.blob.core.windows.net')]"
+            "storageUri": "[concat('http://',parameters('stackPrefix'), 'store','.blob.core.windows.net')]"
           }
         }
       }
@@ -320,7 +320,7 @@
       },
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[concat('Microsoft.Storage/storageAccounts/', concat(parameters('stackPrefix'), '-store'))]",
+        "[concat('Microsoft.Storage/storageAccounts/', concat(parameters('stackPrefix'), 'store'))]",
         "[concat('Microsoft.Network/networkInterfaces/', concat(parameters('stackPrefix'), '-mgtnic', 1))]",
         "[concat('Microsoft.Network/networkInterfaces/', concat(parameters('stackPrefix'), '-datanic', 1))]",
         "[concat('Microsoft.Compute/availabilitySets/', concat(parameters('stackPrefix'), '-avset'))]"
@@ -347,7 +347,7 @@
           "osDisk": {
             "name": "osdisk",
             "vhd": {
-              "uri": "[concat('http://',parameters('stackPrefix'),'-store','.blob.core.windows.net/vhds/','osdisk', '-compute', '.vhd')]"
+              "uri": "[concat('http://',parameters('stackPrefix'),'store','.blob.core.windows.net/vhds/','osdisk', '-compute', '.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
@@ -366,7 +366,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
-            "storageUri": "[concat('http://',parameters('stackPrefix'), '-store','.blob.core.windows.net')]"
+            "storageUri": "[concat('http://',parameters('stackPrefix'), 'store','.blob.core.windows.net')]"
           }
         }
       }
