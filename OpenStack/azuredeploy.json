@@ -302,7 +302,8 @@
               }
             },
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(parameters('stackPrefix'), '-datanic0'))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(parameters('stackPrefix'), '-datanic0'))]",
+              "properties": {"primary": false}
             }
           ]
         },
@@ -360,10 +361,11 @@
           "networkInterfaces": [
             {
               "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(parameters('stackPrefix'), '-mgtnic1'))]",
-              "properties": {"primary": false}
+              "properties": {"primary": true}
             },
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(parameters('stackPrefix'), '-datanic1'))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(parameters('stackPrefix'), '-datanic1'))]",
+              "properties": {"primary": false}
             }
           ]
         },
