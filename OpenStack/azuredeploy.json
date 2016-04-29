@@ -60,7 +60,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "name": "[concat(parameters('stackPrefix'),'-store')]",
+      "name": "[concat(parameters('stackPrefix'),'store')]",
       "tags": {
         "displayName": "StorageAccount"
       },
